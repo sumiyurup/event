@@ -1,0 +1,53 @@
+{{define "main"}}
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <form action="{{site.Params.contact_form_action}}" method="POST" enctype="multipart/form-data">
+          <div class="mb-4">
+            <label for="name" class="form-label">Project Name</label>
+            <input type="text" name="name" class="form-control rounded" id="name" placeholder="Alex Smith" required>
+          </div>
+          
+          <div class="mb-4">
+            <label for="form-select" class="form-label">Project Type</label><br>
+            <select class="form-control rounded" aria-label="Default select example" required>
+              <option selected>Select</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label for="date" class="form-label">Launch Date</label>
+            <input type="date" name="date" class="form-control rounded" id="email" placeholder="hello@bookworm.com" required>
+          </div>
+          <div class="mb-4">
+            <label for="team" class="form-label">Team Name</label>
+            <input type="text" name="team" class="form-control rounded" id="subject" placeholder="Alzheimer's Walk Team" required>
+          </div>
+          <div class="mb-4">
+            <label for="twitter" class="form-label">Twitter URL</label>
+            <input type="text" name="twitter" class="form-control rounded" id="subject" placeholder="https://twitter.com/sumiyurup" required>
+          </div>
+          <div class="mb-4">
+            <label for="discord" class="form-label">Discord Server</label>
+            <input type="text" name="discord" class="form-control rounded" id="subject" placeholder="Discord Server" required>
+          </div>
+          <div class="mb-4">
+            <label for="image" class="form-label">Your Cover Image (970px * 570px)</label>
+            <input type="file" name="name" class="form-control rounded" id="image" name="upload" required>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="form-label">Project Description</label>
+            <textarea class="form-control rounded" name="message" id="message" rows="4" placeholder="Project Description" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary rounded" aria-label="Send Message">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
