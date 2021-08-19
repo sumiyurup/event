@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://examplesite.org/"
+baseURL = "https://naughty-ardinghelli-6895cc.netlify.app"
 title = "Bookworm - Personal Blog Template"
 theme = "bookworm"
 # post pagination
