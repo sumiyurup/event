@@ -3,122 +3,53 @@
   {{ partial "head.html" . }}
 
   <body>
-    {{ partial "header.html" . }}
-    <!-- Modal show message (Addeed by Pranto for #exampleModalLabel)-->
-    {{ partial "header.html" . }}
+    <div class="snow-div">
+      {{ partial "header.html" . }}
+      <!-- Modal show message (Addeed by Pranto for #exampleModalLabel)-->
+      {{ partial "header.html" . }}
 
-    <main id="main">
-      <!-- ======= calender Section ======= -->
-      <!-- ======= calender Section ======= -->
-      <section
-        id="calender"
-        class="calender"
-        style="
-          background-image: url('/assets/img/hero-bg.jpg');
-          background-size: cover;
-        "
-      >
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Advant Calender</h2>
-          </div>
-
-          <div class="row justify-content-center">
-            {{ range .Site.Data.dates}}
-            <div class="wrapper">
-              <img src="/assets/img/dates/1-18.png" alt="" class="door-img" />
-              <h3><a href="{{.post1}}">{{.posttitle1}}</a></h3>
-              <h3><a href="{{.post2}}">{{.posttitle2}}</a></h3>
-              <h3><a href="{{.post3}}">{{.posttitle3}}</a></h3>
-              <!--<img src="https://source.unsplash.com/mou0S7ViElQ" alt="minion">-->
-              <div id="left-door" class="door">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div id="left-knob" class="knob"></div>
-              </div>
-              <div id="right-door" class="door">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div id="right-knob" class="knob"></div>
-              </div>
-              <button class="btn-date">{{.DateNumber}}</button>
+      <main id="main">
+        <section
+          id="calender"
+          class="calender"
+          style="
+            background-image: url('/assets/img/hero-bg.jpg');
+            background-size: cover;
+          "
+        >
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Advant Calender</h2>
             </div>
-            {{ end}}
+            <div class="row justify-content-center">
+              {{ range .Site.Data.dates}}
+              <div class="wrapper">
+                <img src="/assets/img/dates/1-18.png" alt="" class="door-img" />
+                <h3><a href="{{.post1}}">{{.posttitle1}}</a></h3>
+                <h3><a href="{{.post2}}">{{.posttitle2}}</a></h3>
+                <h3><a href="{{.post3}}">{{.posttitle3}}</a></h3>
+                <!--<img src="https://source.unsplash.com/mou0S7ViElQ" alt="minion">-->
+                <div id="left-door" class="door">
+                  <div class="shape"></div>
+                  <div class="shape"></div>
+                  <div id="left-knob" class="knob"></div>
+                </div>
+                <div id="right-door" class="door">
+                  <div class="shape"></div>
+                  <div class="shape"></div>
+                  <div id="right-knob" class="knob"></div>
+                </div>
+                <button class="btn-date">{{.DateNumber}}</button>
+              </div>
+              {{ end}}
+            </div>
           </div>
-        </div>
-      </section>
-      <!-- End calender Section -->
-    </main>
-    <!-- End #main -->
+        </section>
+        <!-- End calender Section -->
+      </main>
+      <!-- End #main -->
 
-    {{ partial "footer.html" . }}
-    <script>
-      //Document file
-      const button = document.querySelectorAll(".btn-date");
-      const leftDoor = document.querySelectorAll("#left-door");
-      const rightDoor = document.querySelectorAll("#right-door");
-      const wrapper = document.querySelectorAll(".wrapper");
-      //Getting today date
-      let date = new Date();
-
-      //test
-      //I set the date and month manually so that I can test
-      date.setMonth(11); //11 means december
-      date.setDate(18);
-
-      let presentMonth = date.getMonth();
-      let presentDate = date.getDate();
-
-      //Array
-      //let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-      //Variable
-
-      let dd = presentDate;
-      let yy = date.getFullYear();
-
-      let randNum = Math.floor(Math.random() * 24);
-      let html = `<img src="/assets/img/dates/1-${randNum}.png" alt="" class="door-img">`;
-      wrapper.innerHTML = html;
-
-      wrapper.forEach(function (element) {
-        let randNum = Math.floor(Math.random() * 23 + 1);
-        let html = `<img src="/assets/img/dates/1-${randNum}.png" alt="" class="door-img">`;
-        element.insertAdjacentHTML("afterbegin", html);
-      });
-
-      //Applying Current Date on pop-up view
-
-      //Checking December Month and Date
-
-      if (presentMonth == 11) {
-        button.forEach(function (element, index) {
-          let btnIndex = index;
-          if (element.innerHTML <= presentDate) {
-            element.addEventListener("click", function () {
-              element.style.display = "none";
-              leftDoor.forEach(function (element, index) {
-                let e = element;
-                let i = index;
-                if (btnIndex == i) {
-                  e.style.transform = "rotateY(-140deg)";
-                }
-              });
-              rightDoor.forEach(function (element, index) {
-                let e = element;
-                let i = index;
-                if (btnIndex == i) {
-                  e.style.transform = "rotateY(140deg)";
-                }
-              });
-            });
-          } else {
-            element.addEventListener("click", function () {});
-          }
-        });
-      } else {
-        element.addEventListener("click", function () {});
-      }
-    </script>
+      {{ partial "footer.html" . }}
+    </div>
   </body>
 </html>
