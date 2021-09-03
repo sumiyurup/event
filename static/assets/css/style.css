@@ -9,9 +9,8 @@
 # General
 --------------------------------------------------------------*/
 
-
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: #444444;
   height: 100%;
 }
@@ -26,8 +25,13 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Work Sans", sans-serif;
 }
 
 #main {
@@ -123,10 +127,23 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #ff8daa;
+  background: #ce3262;
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
   z-index: 997;
   padding: 15px 0;
+}
+
+#header .width50 {
+  width: 70%;
+}
+
+@media (max-width: 600px) {
+  #header .width50 {
+    width: 100%;
+  }
+  #header .logo img {
+    max-height: 30px;
+  }
 }
 
 #header .logo {
@@ -144,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 60px;
 }
 
 @media (max-width: 992px) {
@@ -166,11 +183,11 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   line-height: 0px;
   transition: 0.3s;
-  font-size: 16px;
+  font-size: 26px;
 }
 
 .header-social-links a:hover {
-  color: #df2152;
+  color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -196,20 +213,22 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0 10px 28px;
 }
 
-.navbar a, .navbar a:focus {
+.navbar a,
+.navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
   font-weight: 600;
-  color: #ffffff;
+  color: #fff;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
 }
 
-.navbar a i, .navbar a:focus i {
+.navbar a i,
+.navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
@@ -222,19 +241,24 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #df2152;
+  background-color: #000;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+.navbar a:hover:before,
+.navbar li:hover > a:before,
+.navbar .active:before {
   visibility: visible;
   width: 25px;
 }
 
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #df2152;
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: #000;
 }
 
 .navbar .dropdown ul {
@@ -269,7 +293,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
   color: #df2152;
 }
 
@@ -364,7 +390,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #222222;
 }
 
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
   color: #df2152;
 }
 
@@ -396,7 +424,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover > a {
   color: #df2152;
 }
 
@@ -410,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right;
+  background: url("../img/hero-bg2.jpg") top right;
   background-size: cover;
 }
 
@@ -433,14 +463,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #222222;
 }
 
+#hero img {
+  height: 100px;
+}
+#hero span {
+  color: #00a29c;
+}
+
 #hero h2 {
-  color: #9e022a;
+  color: #00add8;
   margin: 10px 0 0 0;
   font-size: 22px;
 }
 
 #hero .btn-about {
-  font-family: "Raleway", sans-serif;
+  font-family: "Work Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
@@ -498,6 +535,7 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .section-title h2 {
@@ -507,15 +545,16 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  color: #402b56;
 }
 
 .section-title h2::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 50px;
   height: 3px;
-  background: #df2152;
+  background: #402b56;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -523,8 +562,6 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
-
-
 
 /*--------------------------------------------------------------
 # calender section
@@ -538,17 +575,14 @@ section {
   background: #fff;
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
   transform-origin: middle;
-  
 }
-
-
 
 .calender .icon-box h4 {
   font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 70px;
   color: #fff !important;
-  background-color: rgba(0, 0, 0, 0.2) ;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .calender .icon-box h4 a {
@@ -634,8 +668,6 @@ section {
   fill: #11dbcf;
 }
 
-
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -653,14 +685,13 @@ section {
 }
 
 #footer .credits a {
-  color: #df2152;
+  color: #402b56;
 }
-#date{
+#date {
   color: white;
 }
 
-
-.row{
+.row {
   display: flex;
   justify-content: space-between;
 }
@@ -669,19 +700,19 @@ section {
 .wrapper {
   height: 300px;
   width: 250px;
-  border: 10px solid #d80000c9;
+  border: 10px solid #00a29c;
   position: relative;
   margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   /* 3D */
   perspective: 1000px;
 }
 
-.wrapper a{
+.wrapper a {
   text-decoration: none;
   color: black;
   background-color: rgba(107, 48, 9, 0.3);
@@ -689,14 +720,10 @@ section {
   padding: 5px;
   border-radius: 10px;
   transition: all 0.2s;
-  
 }
-.wrapper a:hover{
-  background-color: rgba(216, 93, 11, 0.7);
-  box-shadow: 0 0 5px black;
+.wrapper a:hover {
+  background-color: #ce3262;
 }
-
-
 
 .door {
   background-color: #ffffff;
@@ -713,7 +740,7 @@ section {
 #left-door {
   top: 0;
   left: 0;
-  border-right: 1px solid black;
+  border-right: 1px solid #ce3262;
   /* transition */
   transform-origin: left;
   transition: transform 0.5s;
@@ -722,14 +749,14 @@ section {
 #right-door {
   top: 0;
   right: 0;
-  border-left: 1px solid black;
+  border-left: 1px solid #ce3262;
   /* transition */
   transform-origin: right;
   transition: transform 0.5s;
 }
 
 .shape {
-  border: 4px solid black;
+  border: 4px solid #402b56;
   width: 100px;
   height: 130px;
 }
@@ -737,35 +764,33 @@ section {
 .knob {
   width: 10px;
   height: 50px;
-  background-color: #c92e13;
+  background-color: #00758d;
   position: absolute;
 }
 
 #left-knob {
   top: 50%;
   right: 10px;
-  
 }
 
 #right-knob {
   top: 50%;
   left: 10px;
-  
 }
 
-/* Door swing effect */
-//.wrapper:hover #left-door{
+/* Door swing effect 
+.wrapper:hover #left-door{
   transform: rotateY(-140deg);
   z-index: 9999;
 }
 
-//.wrapper:hover #right-door{
+.wrapper:hover #right-door{
   transform: rotateY(140deg);
   z-index: 9999;
 }
+*/
 
-
-h3{
+h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -773,10 +798,10 @@ h3{
   height: 33%;
 }
 
-.btn-date{
+.btn-date {
   top: 20%;
   position: absolute;
-  background-color: rgb(255, 61, 61);
+  background-color: #00758d;
   opacity: 0.8;
   border: none;
   border-radius: 10px;
@@ -787,21 +812,19 @@ h3{
   transition: all 0.2s;
 }
 
-.btn-date:hover{
-  background-color: rgb(235, 71, 22);
+.btn-date:hover {
+  background-color: #00758d;
   opacity: 1;
-  
 }
-.btn-date:active{
-  transform: scale(.97);
+.btn-date:active {
+  transform: scale(0.97);
 }
-.door-img{
+.door-img {
   position: absolute;
   background-repeat: no-repeat;
   z-index: -9999;
   width: 100%;
   height: 100%;
-  
 }
 
 /*Snow*/
@@ -812,24 +835,24 @@ body .snow {
   animation: animate 120s linear infinite;
   overflow: hidden;
 }
-body .snow:nth-child(even){
+body .snow:nth-child(even) {
   background: transparent;
-  border: 2px solid red;
+  border: 2px solid #ce3262;
   overflow: hidden;
 }
 
 @keyframes animate {
-  0%{
+  0% {
     transform: translateY(0);
     opacity: 0;
   }
-  1%{
+  1% {
     opacity: 1;
   }
-  98%{
+  98% {
     opacity: 1;
   }
-  100%{
+  100% {
     transform: translateY(30000%);
     opacity: 0;
   }

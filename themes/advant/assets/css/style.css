@@ -11,7 +11,7 @@
 
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   color: #444444;
   height: 100%;
 }
@@ -27,7 +27,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 #main {
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: #ffffff;
@@ -440,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-about {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
