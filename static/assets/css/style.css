@@ -537,6 +537,9 @@ section {
   padding-bottom: 30px;
   padding-top: 10px;
 }
+.section-title img {
+  height: 100px;
+}
 
 .section-title h2 {
   font-size: 32px;
@@ -700,7 +703,7 @@ section {
 .wrapper {
   height: 300px;
   width: 250px;
-  border: 10px solid #00a29c;
+  /* border: 10px solid #00a29c; */
   position: relative;
   margin: 10px;
   display: flex;
@@ -726,9 +729,9 @@ section {
 }
 
 .door {
-  background-color: #ffffff;
+  background-image: linear-gradient(#ff4a50, #f15a25);
   height: 100%;
-  width: 50%;
+  width: 95%;
   position: absolute;
   /* inner layout */
   display: flex;
@@ -754,17 +757,17 @@ section {
   transform-origin: right;
   transition: transform 0.5s;
 }
-
+/*
 .shape {
   border: 4px solid #402b56;
   width: 100px;
   height: 130px;
-}
+} */
 
 .knob {
   width: 10px;
   height: 50px;
-  background-color: #00758d;
+  background-color: #ce3262;
   position: absolute;
 }
 
