@@ -70,7 +70,7 @@ if(presentMonth == 11){
         let btnIndex = index;
         if(element.innerHTML <= presentDate){
             element.addEventListener("click", function(){
-                element.style.background="#ce3262";
+                element.style.backgrsound="#ce3262";
                 let newImg = `<img src="/assets/img/dates/open.jpeg" alt="" class="door-img">`;
 
                  leftDoor.forEach(function(element, index){
@@ -101,6 +101,7 @@ if(presentMonth == 11){
             });
         }else{
             element.style.background="#ce3262";
+            element.style.cursor="context-menu";
             element.addEventListener("click", function(){
             }
             
