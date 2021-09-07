@@ -801,22 +801,25 @@ h3 {
   height: 33%;
 }
 
+.btn-date p{
+  font-size: 40px;
+}
+
 .btn-date {
-  top: 20%;
   position: absolute;
-  background-color: #00758d;
+  background-color: transparent;
   opacity: 0.8;
   border: none;
   border-radius: 10px;
-  width: 70px;
-  height: 70px;
+  width: 100%;
+  height: 100%;
   font-size: 40px;
   color: white;
   transition: all 0.2s;
 }
 
 .btn-date:hover {
-  background-color: #00758d;
+  color: #ce3262;
   opacity: 1;
 }
 .btn-date:active {

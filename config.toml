@@ -8,3 +8,6 @@ theme = "advant"
 [module.hugoVersion]
 extended = true
 min = "0.87.0"
+
+[permalinks]
+  posts = '/:year/:month/:title/'
