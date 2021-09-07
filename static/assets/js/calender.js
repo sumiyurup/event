@@ -70,7 +70,7 @@ if(presentMonth == 11){
         let btnIndex = index;
         if(element.innerHTML <= presentDate){
             element.addEventListener("click", function(){
-                element.style.display ="none";
+                element.style.background="#ce3262";
                 let newImg = `<img src="/assets/img/dates/open.jpeg" alt="" class="door-img">`;
 
 
