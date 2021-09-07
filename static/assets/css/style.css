@@ -819,7 +819,7 @@ h3 {
 
 .btn-date:hover {
   color: transparent;
-  opacity: 1;
+  opacity: 0.8;
 }
 .btn-date:active {
   transform: scale(0.97);

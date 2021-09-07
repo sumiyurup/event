@@ -73,7 +73,6 @@ if(presentMonth == 11){
                 element.style.background="#ce3262";
                 let newImg = `<img src="/assets/img/dates/open.jpeg" alt="" class="door-img">`;
 
-
                  leftDoor.forEach(function(element, index){
                      let e = element
                     let i = index;
@@ -101,8 +100,11 @@ if(presentMonth == 11){
 
             });
         }else{
+            element.style.background="#ce3262";
             element.addEventListener("click", function(){
-            });
+            }
+            
+            );
         }
         
     });
