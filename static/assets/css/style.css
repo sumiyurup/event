@@ -731,7 +731,7 @@ section {
 .door {
   background-image: linear-gradient(#ff4a50, #f15a25);
   height: 100%;
-  width:100%;
+  width: 100%;
   position: absolute;
   /* inner layout */
   display: flex;
@@ -801,7 +801,7 @@ h3 {
   height: 33%;
 }
 
-.btn-date p{
+.btn-date p {
   font-size: 40px;
 }
 
@@ -815,7 +815,6 @@ h3 {
   height: 100%;
   font-size: 40px;
   transition: all 0.2s;
-  
 }
 
 .btn-date:hover {
