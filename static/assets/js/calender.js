@@ -66,7 +66,7 @@ if (presentMonth == 11) {
       });
     } else {
       element.style.background = "#ce3262";
-      element.style.cursor = "context-menu";
+      element.style.cursor = "default";
       element.addEventListener("click", function () {});
     }
   });
