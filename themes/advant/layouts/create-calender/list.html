@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ partial "head.html" . }} {{ partial "header.html" . }}
-  <!-- Modal show message (Addeed by Pranto for #exampleModalLabel)-->
-  <body>
-    {{ partial "header.html" . }}
+  {{ partial "head.html" . }}
 
-    <main id="main">
+  
+    
+      {{ partial "header.html" . }}
+      <!-- Modal show message (Addeed by Pranto for #exampleModalLabel)-->
+      <body>
+      {{ partial "header.html" . }}
+      
+      <main id="main">
+        
         <section
           id="calender"
           class="calender"
@@ -24,19 +29,22 @@
               {{ range .Site.Data.dates}}
               <div class="wrapper">
                 <img src="/assets/img/dates/1-18.png" alt="" class="door-img" />
-                {{ with .Site.GetPage "/post.md" }}
-                <h3><a href="/">{{ .Title }}</a></h3>
-                {{ end }}
+
+                <h3><a href="{{.post1}}">{{ .posttitle1 }}</a></h3>
+                <h3><a href="{{.post2}}">{{ .posttitle2 }}</a></h3>
+                <h3><a href="{{.post3}}">{{ .posttitle3 }}</a></h3>
                 <!--<img src="https://source.unsplash.com/mou0S7ViElQ" alt="minion">-->
                 <div id="left-door" class="door">
-                  <p style="font-size: 40px; z-index: 1">{{.DateNumber}}</p>
+                  <p style="font-size: 40px; z-index: 1;">{{.DateNumber}}</p>
                   <div class="shape"></div>
-
+                  
                   <div class="shape"></div>
                   <div id="left-knob" class="knob"></div>
-
-                  <button class="btn-date">{{.DateNumber}}</button>
+                  
+                <button class="btn-date " >{{.DateNumber}}</button>
                 </div>
+                
+                
               </div>
               {{ end}}
             </div>
@@ -44,10 +52,11 @@
         </section>
         <!-- End calender Section -->
       </div>
-    </main>
-    <!-- End #main -->
-
-    {{ partial "footer.html" . }}
-    <script src="/assets/js/snow.js"></script>
+      </main>
+      <!-- End #main -->
+    
+      {{ partial "footer.html" . }}
+    
+      <script src="/assets/js/snow.js"></script>
   </body>
 </html>
