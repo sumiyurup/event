@@ -2,8 +2,8 @@
 <html lang="en">
   {{ partial "head.html" . }}
   <body>
-    {{ partial "header.html" . }}
-    {{.Content}}
-    {{ partial "footer.html" . }}
+    {{if and (not .IsHome) (ne .Section "blog") (ne .Permalink (`about/` |
+    absURL)) (ne .Permalink (`search/` | absURL)) }} {{ partial "header.html" .
+    }} {{end}} {{ block "main" . }}{{ end }} {{ partial "footer.html" . }}
   </body>
 </html>

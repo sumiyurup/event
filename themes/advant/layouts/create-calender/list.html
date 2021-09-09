@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   {{ partial "head.html" . }}
-
-  
-    
       {{ partial "header.html" . }}
       <!-- Modal show message (Addeed by Pranto for #exampleModalLabel)-->
       <body>
@@ -25,39 +22,17 @@
               <p>Knock on the door.</p>
               <h2>GOOPHER Advant Calender</h2>
             </div>
-            <div class="row justify-content-center">
-              {{ range .Site.Data.dates}}
-              <div class="wrapper">
-                <img src="/assets/img/dates/1-18.png" alt="" class="door-img" />
-
-                <h3><a href="{{.post1}}">{{ .posttitle1 }}</a></h3>
-                <h3><a href="{{.post2}}">{{ .posttitle2 }}</a></h3>
-                <h3><a href="{{.post3}}">{{ .posttitle3 }}</a></h3>
-                <!--<img src="https://source.unsplash.com/mou0S7ViElQ" alt="minion">-->
-                <div id="left-door" class="door">
-                  <p style="font-size: 40px; z-index: 1;">{{.DateNumber}}</p>
-                  <div class="shape"></div>
-                  
-                  <div class="shape"></div>
-                  <div id="left-knob" class="knob"></div>
-                  
-                <button class="btn-date " >{{.DateNumber}}</button>
-                </div>
-                
-                
-              </div>
-              {{ end}}
-              
-            </div>
+            {{ partial "dates.html" . }}
           </div>
+          
         </section>
         <!-- End calender Section -->
+        
       </div>
       </main>
       <!-- End #main -->
     
       {{ partial "footer.html" . }}
-    
       <script src="/assets/js/snow.js"></script>
   </body>
 </html>

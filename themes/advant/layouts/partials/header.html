@@ -4,7 +4,7 @@
 
     
     <!-- Uncomment below if you prefer to use an image logo -->
-    <a href="/" class="logo"><img src="/assets/img/logo2.png" alt="" class="img-fluid"></a>
+    <a href="/" class="logo "><img src="/assets/img/logo2.png" alt="" class="img-fluid"></a>
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
@@ -21,4 +21,23 @@
 
   </div>
 
+  <script>
+    $(function() { var logo = $(".lrg-logo"); $(window).scroll(function() {
+var scroll = $(window).scrollTop();
+
+    if (scroll >= 500) {
+      if(!logo.hasClass("hide2")) {
+        logo.hide();
+        logo.removeClass('hide1').addClass("sml-logo").fadeIn( "slow");
+      }
+    } else {
+      if(!logo.hasClass("hide1")) {
+        logo.hide();
+        logo.removeClass("hide12").addClass('lrg-logo').fadeIn( "slow");
+      }
+    }
+
+});
+});
+  </script>
 </header><!-- End Header -->

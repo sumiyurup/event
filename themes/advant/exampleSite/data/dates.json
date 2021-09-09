@@ -32,12 +32,8 @@
   {
     "DateNumber": "11",
     "Image": "/assets/img/dates/1-11.png",
-    "post1": "/",
-    "post2": "/",
-    "post3": "/",
-    "posttitle1": "My new Post",
-    "posttitle2": "My new Post",
-    "posttitle3": "My new Post"
+    "post1": "/01/post1/",
+    "posttitle1": "Mystery box "
   },
   {
     "DateNumber": "24",

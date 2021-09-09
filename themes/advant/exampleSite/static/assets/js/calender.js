@@ -1,75 +1,75 @@
 //Document file
-const card = document.querySelectorAll(".btn-primary");
-const modalTitle1 = document.getElementById("date1");
-const modalTitle2 = document.getElementById("date2");
-
+const button = document.querySelectorAll(".btn-date");
+const leftDoor = document.querySelectorAll("#left-door");
+const rightDoor = document.querySelectorAll("#right-door");
+const wrapper = document.querySelectorAll(".wrapper");
 //Getting today date
 let date = new Date();
 
-
-//test
 //I set the date and month manually so that I can test
-date.setMonth(11);  //11 means december
-date.setDate(4);
+date.setMonth(11); //11 means december
+date.setDate(18);
 
 let presentMonth = date.getMonth();
 let presentDate = date.getDate();
 
 //Array
-let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+//let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 //Variable
-let mm = months[presentMonth];
-let dd = presentDate
+
+let dd = presentDate;
 let yy = date.getFullYear();
-let dynamicDate = `Today is ${mm} ${dd} ${yy}`;
 
+let randNum = Math.floor(Math.random() * 24);
+let html = `<img src="/assets/img/dates/1-${randNum}.png" alt="" class="door-img">`;
+wrapper.innerHTML = html;
 
-
-//Function
-function img(){
-    card.forEach(element => {
-        let ran = Math.floor(Math.random()*24 + 1)
-        element.parentElement.style.backgroundImage = `url('/assets/img/dates/1-${ran}.png')`       
-        
-    });
-}
-img()
+wrapper.forEach(function (element) {
+  let randNum = Math.floor(Math.random() * 23 + 1);
+  let html = `<img src="/assets/img/dates/1-${randNum}.png" alt="" class="door-img">`;
+  element.insertAdjacentHTML("afterbegin", html);
+});
 
 //Applying Current Date on pop-up view
-modalTitle1.innerHTML = dynamicDate;
-modalTitle2.innerHTML = dynamicDate;
-modalTitle1.style.color = "black";
-modalTitle2.style.color = "black";
 
- //Checking December Month and Date
+//Checking December Month and Date
 
-if(presentMonth == 11){
-    card.forEach(element => {
-        let cardNumber = parseInt(element.innerText);
-        
-        if(cardNumber <= presentDate){
-            element.setAttribute("data-bs-target", "#exampleModal2");
-            element.addEventListener("click", function(){
-                element.style.display = "none";
-                element.parentElement.style.backgroundImage = "url('/assets/opened-02.png')";
-                
-            });
-        }
-        else{
-            element.setAttribute("data-bs-target", "#exampleModal");
-            element.addEventListener("click", function(){
-                
-            });
-        }
-    });
-    
+if (presentMonth == 11) {
+  button.forEach(function (element, index) {
+    let btnIndex = index;
+    if (element.innerHTML <= presentDate) {
+      element.addEventListener("click", function () {
+        element.style.backgrsound = "#ce3262";
+        let newImg = `<img src="/assets/img/dates/open.jpeg" alt="" class="door-img">`;
+
+        leftDoor.forEach(function (element, index) {
+          let e = element;
+          let i = index;
+          if (btnIndex == i) {
+            e.style.transform = "rotateY(-140deg)";
+            setTimeout(() => {
+              e.style.transform = "rotateY(0deg)";
+            }, 3000);
+          }
+        });
+        rightDoor.forEach(function (element, index) {
+          let e = element;
+          let i = index;
+          if (btnIndex == i) {
+            e.style.transform = "rotateY(140deg)";
+            setTimeout(() => {
+              e.style.transform = "rotateY(0deg)";
+            }, 3000);
+          }
+        });
+      });
+    } else {
+      element.style.background = "#ce3262";
+      element.style.cursor = "default";
+      element.addEventListener("click", function () {});
+    }
+  });
+} else {
+  element.addEventListener("click", function () {});
 }
-else{
-        card.forEach(element => {
-            element.setAttribute("data-bs-target", "#exampleModal");
-            element.addEventListener("click", function(){
-                
-            });
-    });
-};
