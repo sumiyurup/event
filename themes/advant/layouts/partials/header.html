@@ -21,23 +21,4 @@
 
   </div>
 
-  <script>
-    $(function() { var logo = $(".lrg-logo"); $(window).scroll(function() {
-var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-      if(!logo.hasClass("hide2")) {
-        logo.hide();
-        logo.removeClass('hide1').addClass("sml-logo").fadeIn( "slow");
-      }
-    } else {
-      if(!logo.hasClass("hide1")) {
-        logo.hide();
-        logo.removeClass("hide12").addClass('lrg-logo').fadeIn( "slow");
-      }
-    }
-
-});
-});
-  </script>
 </header><!-- End Header -->

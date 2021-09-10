@@ -439,10 +439,18 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: url("../img/hero-bg2.jpg") top right;
   background-size: cover;
 }
+
+#hero2 {
+  width: 100%;
+  background: url("../img/hero-bg2.jpg") top right;
+  background-size: cover;
+}
+
+
 
 #hero .container {
   padding-top: 70px;
@@ -824,27 +832,7 @@ h3 {
 .btn-date:active {
   transform: scale(0.97);
 }
-.door-img {
-  position: absolute;
-  background-repeat: no-repeat;
-  z-index: -9999;
-  width: 100%;
-  height: 100%;
-}
 
-/*Snow*/
-body .snow {
-  position: absolute;
-  background: white;
-  border-radius: 100%;
-  animation: animate 120s linear infinite;
-  overflow: hidden;
-}
-body .snow:nth-child(even) {
-  background: transparent;
-  border: 2px solid #ce3262;
-  overflow: hidden;
-}
 
 @keyframes animate {
   0% {

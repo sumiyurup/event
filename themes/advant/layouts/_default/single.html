@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   {{ partial "head.html" . }}
+  {{ partial "header.html" . }}
   <body >
     {{ partial "header.html" . }}
-    <section id="hero" class="d-flex align-items-center">
+    <section id="hero" class="d-flex align-items-center" style="height: auto;">
       <div
-        class="container d-flex flex-column align-items-center"
+        class="container d-flex flex-column align-items-center padiing10"
         data-aos="zoom-in"
         data-aos-delay="100"
+        
       >
       {{.Content}}
       </div>
