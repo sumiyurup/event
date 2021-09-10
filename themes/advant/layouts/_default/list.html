@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header.html" . }}
+    <section class="mk_hero_area">
+      <div class="container">
+        <div class="hero_header_title">
+          <h1 class="s-h_t" style="text-transform: capitalize">{{.Title}}</h1>
+        </div>
+        <div class="mk_post">
+          <div class="mk_post_content">
+            <div class="mk_post_top">
+              <div class="row gx-5 gy-4">
+                {{ range .Pages }}
+                <div class="col-md-4">
+                  <div class="mk_post_single_item">
+                    <h3 class="km_post_single_item_title">
+                      <a
+                        href="{{.Permalink}}"
+                        class="text-transform: capitalize;"
+                        >{{.Title}}</a
+                      >
+                    </h3>
+                  </div>
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ partial "footer.html" . }}
+  </body>
+</html>
